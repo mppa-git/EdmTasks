@@ -200,7 +200,7 @@ namespace EdmTasks
 
             // generate views & write them out to a file
             var evg = new EntityViewGenerator(languageOption);
-            var viewGenerationErrors = evg.GenerateViews(mappingItemCollection, viewsWriter);
+            var viewGenerationErrors = evg.GenerateViews(mappingItemCollection, viewsWriter, targetEntityFrameworkVersion: EntityFrameworkVersions.Version2);
 
             if (viewGenerationErrors != null) allErrors.AddRange(viewGenerationErrors);
 
